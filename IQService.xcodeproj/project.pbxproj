@@ -9,7 +9,25 @@
 /* Begin PBXBuildFile section */
 		BA32583A2275EC890026767D /* IQService.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3258392275EC890026767D /* IQService.m */; };
 		BA32583B2275EC890026767D /* IQService.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BA3258382275EC890026767D /* IQService.h */; };
+		BA3258492275ED920026767D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3258482275ED920026767D /* AppDelegate.m */; };
+		BA32584C2275ED920026767D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA32584B2275ED920026767D /* ViewController.m */; };
+		BA32584F2275ED920026767D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA32584D2275ED920026767D /* Main.storyboard */; };
+		BA3258512275ED940026767D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3258502275ED940026767D /* Assets.xcassets */; };
+		BA3258542275ED940026767D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3258522275ED940026767D /* LaunchScreen.storyboard */; };
+		BA3258572275ED940026767D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3258562275ED940026767D /* main.m */; };
+		BA32585E2275F1550026767D /* IQPrintClassNameService.m in Sources */ = {isa = PBXBuildFile; fileRef = BA32585D2275F1550026767D /* IQPrintClassNameService.m */; };
+		BA3258642275F3E60026767D /* IQService.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3258392275EC890026767D /* IQService.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA3258622275F3C90026767D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA32582D2275EC890026767D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA3258342275EC890026767D;
+			remoteInfo = IQService;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		BA3258332275EC890026767D /* CopyFiles */ = {
@@ -28,10 +46,30 @@
 		BA3258352275EC890026767D /* libIQService.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIQService.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3258382275EC890026767D /* IQService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IQService.h; sourceTree = "<group>"; };
 		BA3258392275EC890026767D /* IQService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IQService.m; sourceTree = "<group>"; };
+		BA3258452275ED920026767D /* IQServiceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IQServiceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA3258472275ED920026767D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BA3258482275ED920026767D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BA32584A2275ED920026767D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BA32584B2275ED920026767D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BA32584E2275ED920026767D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA3258502275ED940026767D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA3258532275ED940026767D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA3258552275ED940026767D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA3258562275ED940026767D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BA32585B2275F0190026767D /* IQService.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = IQService.plist; sourceTree = "<group>"; };
+		BA32585C2275F1550026767D /* IQPrintClassNameService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IQPrintClassNameService.h; sourceTree = "<group>"; };
+		BA32585D2275F1550026767D /* IQPrintClassNameService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IQPrintClassNameService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BA3258322275EC890026767D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA3258422275ED920026767D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				BA3258372275EC890026767D /* IQService */,
+				BA3258462275ED920026767D /* IQServiceDemo */,
 				BA3258362275EC890026767D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				BA3258352275EC890026767D /* libIQService.a */,
+				BA3258452275ED920026767D /* IQServiceDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,8 +102,27 @@
 			children = (
 				BA3258382275EC890026767D /* IQService.h */,
 				BA3258392275EC890026767D /* IQService.m */,
+				BA32585B2275F0190026767D /* IQService.plist */,
 			);
 			path = IQService;
+			sourceTree = "<group>";
+		};
+		BA3258462275ED920026767D /* IQServiceDemo */ = {
+			isa = PBXGroup;
+			children = (
+				BA3258472275ED920026767D /* AppDelegate.h */,
+				BA3258482275ED920026767D /* AppDelegate.m */,
+				BA32584A2275ED920026767D /* ViewController.h */,
+				BA32584B2275ED920026767D /* ViewController.m */,
+				BA32584D2275ED920026767D /* Main.storyboard */,
+				BA3258502275ED940026767D /* Assets.xcassets */,
+				BA3258522275ED940026767D /* LaunchScreen.storyboard */,
+				BA3258552275ED940026767D /* Info.plist */,
+				BA3258562275ED940026767D /* main.m */,
+				BA32585C2275F1550026767D /* IQPrintClassNameService.h */,
+				BA32585D2275F1550026767D /* IQPrintClassNameService.m */,
+			);
+			path = IQServiceDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +145,24 @@
 			productReference = BA3258352275EC890026767D /* libIQService.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		BA3258442275ED920026767D /* IQServiceDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA32585A2275ED940026767D /* Build configuration list for PBXNativeTarget "IQServiceDemo" */;
+			buildPhases = (
+				BA3258412275ED920026767D /* Sources */,
+				BA3258422275ED920026767D /* Frameworks */,
+				BA3258432275ED920026767D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA3258632275F3C90026767D /* PBXTargetDependency */,
+			);
+			name = IQServiceDemo;
+			productName = IQServiceDemo;
+			productReference = BA3258452275ED920026767D /* IQServiceDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +175,9 @@
 					BA3258342275EC890026767D = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
+					BA3258442275ED920026767D = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 				};
 			};
 			buildConfigurationList = BA3258302275EC890026767D /* Build configuration list for PBXProject "IQService" */;
@@ -106,6 +186,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = BA32582C2275EC890026767D;
 			productRefGroup = BA3258362275EC890026767D /* Products */;
@@ -113,9 +194,23 @@
 			projectRoot = "";
 			targets = (
 				BA3258342275EC890026767D /* IQService */,
+				BA3258442275ED920026767D /* IQServiceDemo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA3258432275ED920026767D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA3258542275ED940026767D /* LaunchScreen.storyboard in Resources */,
+				BA3258512275ED940026767D /* Assets.xcassets in Resources */,
+				BA32584F2275ED920026767D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA3258312275EC890026767D /* Sources */ = {
@@ -126,7 +221,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BA3258412275ED920026767D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA3258642275F3E60026767D /* IQService.m in Sources */,
+				BA32584C2275ED920026767D /* ViewController.m in Sources */,
+				BA3258572275ED940026767D /* main.m in Sources */,
+				BA3258492275ED920026767D /* AppDelegate.m in Sources */,
+				BA32585E2275F1550026767D /* IQPrintClassNameService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA3258632275F3C90026767D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA3258342275EC890026767D /* IQService */;
+			targetProxy = BA3258622275F3C90026767D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA32584D2275ED920026767D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA32584E2275ED920026767D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA3258522275ED940026767D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA3258532275ED940026767D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BA32583C2275EC890026767D /* Debug */ = {
@@ -263,6 +397,38 @@
 			};
 			name = Release;
 		};
+		BA3258582275ED940026767D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IQServiceDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lobster.IQServiceDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA3258592275ED940026767D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IQServiceDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lobster.IQServiceDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -280,6 +446,15 @@
 			buildConfigurations = (
 				BA32583F2275EC890026767D /* Debug */,
 				BA3258402275EC890026767D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA32585A2275ED940026767D /* Build configuration list for PBXNativeTarget "IQServiceDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA3258582275ED940026767D /* Debug */,
+				BA3258592275ED940026767D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

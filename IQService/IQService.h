@@ -10,4 +10,7 @@
 
 @interface IQService : NSObject
 
++ (void)registerServices;
++ (void)invokeMicroService:(NSString *)sevice,...;
+
 @end

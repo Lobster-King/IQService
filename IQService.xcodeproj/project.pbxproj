@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64071B0B22784D0800EBF56E /* LoginModuleCookieService.m in Sources */ = {isa = PBXBuildFile; fileRef = 64071B0A22784D0800EBF56E /* LoginModuleCookieService.m */; };
+		64071B0D22784D7000EBF56E /* LoginModule.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64071B0C22784D7000EBF56E /* LoginModule.plist */; };
+		64071B1022784DC400EBF56E /* LoginModuleAsyncService.m in Sources */ = {isa = PBXBuildFile; fileRef = 64071B0F22784DC400EBF56E /* LoginModuleAsyncService.m */; };
 		BA32583A2275EC890026767D /* IQService.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3258392275EC890026767D /* IQService.m */; };
 		BA32583B2275EC890026767D /* IQService.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BA3258382275EC890026767D /* IQService.h */; };
 		BA3258492275ED920026767D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3258482275ED920026767D /* AppDelegate.m */; };
@@ -43,6 +46,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		64071B0922784D0800EBF56E /* LoginModuleCookieService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModuleCookieService.h; sourceTree = "<group>"; };
+		64071B0A22784D0800EBF56E /* LoginModuleCookieService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModuleCookieService.m; sourceTree = "<group>"; };
+		64071B0C22784D7000EBF56E /* LoginModule.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LoginModule.plist; sourceTree = "<group>"; };
+		64071B0E22784DC400EBF56E /* LoginModuleAsyncService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginModuleAsyncService.h; sourceTree = "<group>"; };
+		64071B0F22784DC400EBF56E /* LoginModuleAsyncService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginModuleAsyncService.m; sourceTree = "<group>"; };
 		BA3258352275EC890026767D /* libIQService.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIQService.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3258382275EC890026767D /* IQService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IQService.h; sourceTree = "<group>"; };
 		BA3258392275EC890026767D /* IQService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IQService.m; sourceTree = "<group>"; };
@@ -79,6 +87,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64071B0822784D0800EBF56E /* MicroServices */ = {
+			isa = PBXGroup;
+			children = (
+				64071B0922784D0800EBF56E /* LoginModuleCookieService.h */,
+				64071B0A22784D0800EBF56E /* LoginModuleCookieService.m */,
+				64071B0E22784DC400EBF56E /* LoginModuleAsyncService.h */,
+				64071B0F22784DC400EBF56E /* LoginModuleAsyncService.m */,
+				64071B0C22784D7000EBF56E /* LoginModule.plist */,
+			);
+			path = MicroServices;
+			sourceTree = "<group>";
+		};
 		BA32582C2275EC890026767D = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +130,7 @@
 		BA3258462275ED920026767D /* IQServiceDemo */ = {
 			isa = PBXGroup;
 			children = (
+				64071B0822784D0800EBF56E /* MicroServices */,
 				BA3258472275ED920026767D /* AppDelegate.h */,
 				BA3258482275ED920026767D /* AppDelegate.m */,
 				BA32584A2275ED920026767D /* ViewController.h */,
@@ -206,6 +227,7 @@
 			files = (
 				BA3258542275ED940026767D /* LaunchScreen.storyboard in Resources */,
 				BA3258512275ED940026767D /* Assets.xcassets in Resources */,
+				64071B0D22784D7000EBF56E /* LoginModule.plist in Resources */,
 				BA32584F2275ED920026767D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +250,8 @@
 				BA3258642275F3E60026767D /* IQService.m in Sources */,
 				BA32584C2275ED920026767D /* ViewController.m in Sources */,
 				BA3258572275ED940026767D /* main.m in Sources */,
+				64071B1022784DC400EBF56E /* LoginModuleAsyncService.m in Sources */,
+				64071B0B22784D0800EBF56E /* LoginModuleCookieService.m in Sources */,
 				BA3258492275ED920026767D /* AppDelegate.m in Sources */,
 				BA32585E2275F1550026767D /* IQPrintClassNameService.m in Sources */,
 			);

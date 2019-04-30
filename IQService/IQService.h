@@ -10,7 +10,21 @@
 
 @interface IQService : NSObject
 
-+ (void)registerServices;
++ (void)registerMicroServices;
+
+/**
+ 同步、异步调用
+
+ @param sevice 微服务名
+ */
 + (void)invokeMicroService:(NSString *)sevice,...;
+
+/**
+ 同步调用
+
+ @param service 微服务名
+ @return 同步调用返回值
+ */
++ (id)invokeMicroServiceSync:(NSString *)service,...;
 
 @end

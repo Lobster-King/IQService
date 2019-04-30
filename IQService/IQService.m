@@ -10,6 +10,8 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
+static NSString *kIQService = @"IQService";
+
 @interface IQService ()
 
 @end
@@ -17,10 +19,10 @@
 @implementation IQService
 
 + (instancetype)sharedService {
-    static IQService *service;
+    static id service = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        service = [[IQService alloc]init];
+        service = [[self alloc]init];
     });
     return service;
 }
@@ -30,6 +32,10 @@
     va_start(arguments, service);
     [[IQService sharedService] invokeService:arguments];
     va_end(arguments);
+}
+
++ (id)invokeMicroServiceSync:(NSString *)service,... {
+    return nil;
 }
 
 - (void)invokeService:(va_list)arguments {
@@ -59,16 +65,37 @@
     }
     [invocation invokeWithTarget:instance];
     
+}
+
++ (void)registerMicroServices {
+    [[IQService sharedService] registerMicroServicesStatic];
+}
+
+/**
+ 静态注册
+ */
+- (void)registerMicroServicesStatic {
     
-}
-
-+ (void)registerServices {
-    [[IQService sharedService] registerServices];
-}
-
-- (void)registerServices {
-    NSString *servicePath = [[NSBundle mainBundle] pathForResource:@"IQService" ofType:@"plist"];
+    NSString *servicePath = [[NSBundle mainBundle] pathForResource:kIQService ofType:@"plist"];
+    if (!servicePath) {
+        return;
+    }
+    
     NSArray *servicesList = [NSArray arrayWithContentsOfFile:servicePath];
+    
+    if (!servicesList.count) {
+        return;
+    }
+    
+    for (NSString *moduleName in servicesList) {
+        NSString *microServicePath = [[NSBundle mainBundle] pathForResource:moduleName ofType:@"plist"];
+        if (!microServicePath) {
+            continue;
+        }
+        
+        
+        
+    }
     
     
 }

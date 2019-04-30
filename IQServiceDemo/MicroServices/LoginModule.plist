@@ -2,7 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>LoginModule</string>
-	<string>BusinessModule</string>
+	<dict>
+		<key>serviceName</key>
+		<string>LoginModuleCookieService</string>
+	</dict>
+	<dict>
+		<key>serviceName</key>
+		<string>LoginModuleAsyncService</string>
+	</dict>
 </array>
 </plist>

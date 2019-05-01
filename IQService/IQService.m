@@ -14,6 +14,9 @@ static NSString *kIQService = @"IQService";
 
 @interface IQService ()
 
+@property (nonatomic, strong) NSMutableDictionary *microServiceMap;/*service map*/
+@property (nonatomic, strong) dispatch_semaphore_t semaphore;/*lock*/
+
 @end
 
 @implementation IQService
@@ -68,7 +71,9 @@ static NSString *kIQService = @"IQService";
 }
 
 + (void)registerMicroServices {
+    dispatch_semaphore_wait([IQService sharedService].semaphore, DISPATCH_TIME_FOREVER);
     [[IQService sharedService] registerMicroServicesStatic];
+    dispatch_semaphore_signal([IQService sharedService].semaphore);
 }
 
 /**
@@ -97,8 +102,21 @@ static NSString *kIQService = @"IQService";
         
     }
     
-    
 }
 
+#pragma mark--Getters & Setters--
+- (NSMutableDictionary *)microServiceMap {
+    if (!_microServiceMap) {
+        _microServiceMap = [NSMutableDictionary dictionary];
+    }
+    return _microServiceMap;
+}
+
+- (dispatch_semaphore_t)semaphore {
+    if (!_semaphore) {
+        _semaphore = dispatch_semaphore_create(1);
+    }
+    return _semaphore;
+}
 
 @end

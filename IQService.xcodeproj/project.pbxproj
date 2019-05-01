@@ -20,6 +20,7 @@
 		BA3258572275ED940026767D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3258562275ED940026767D /* main.m */; };
 		BA32585E2275F1550026767D /* IQPrintClassNameService.m in Sources */ = {isa = PBXBuildFile; fileRef = BA32585D2275F1550026767D /* IQPrintClassNameService.m */; };
 		BA3258642275F3E60026767D /* IQService.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3258392275EC890026767D /* IQService.m */; };
+		BA6881672279DE890092316F /* IQService.plist in Sources */ = {isa = PBXBuildFile; fileRef = BA32585B2275F0190026767D /* IQService.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6881672279DE890092316F /* IQService.plist in Sources */,
 				BA3258642275F3E60026767D /* IQService.m in Sources */,
 				BA32584C2275ED920026767D /* ViewController.m in Sources */,
 				BA3258572275ED940026767D /* main.m in Sources */,

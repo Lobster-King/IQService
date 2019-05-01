@@ -10,7 +10,8 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
-static NSString *kIQService = @"IQService";
+static NSString *kIQService     = @"IQService";
+static NSString *kIQServiceKey  = @"serviceName";
 
 @interface IQService ()
 
@@ -33,22 +34,31 @@ static NSString *kIQService = @"IQService";
 + (void)invokeMicroService:(NSString *)service,... {
     va_list arguments;
     va_start(arguments, service);
-    [[IQService sharedService] invokeService:arguments];
+    [[IQService sharedService] invokeService:service withArgs:arguments];
     va_end(arguments);
 }
 
 + (id)invokeMicroServiceSync:(NSString *)service,... {
-    return nil;
+    va_list arguments;
+    va_start(arguments, service);
+    return [[IQService sharedService] invokeService:service withArgs:arguments];
+    va_end(arguments);
 }
 
-- (void)invokeService:(va_list)arguments {
+- (id)invokeService:(NSString *)service withArgs:(va_list)arguments {
     NSMutableArray *argsArray = [NSMutableArray array];
     id param = nil;
     while ((param = va_arg(arguments, id))) {
         [argsArray addObject:param];
     }
     
-    Class serviceCls = NSClassFromString(@"IQPrintClassNameService");
+    NSString *serviceClss = self.microServiceMap[service];
+    
+    if (!serviceClss.length) {
+        return nil;
+    }
+    
+    Class serviceCls = NSClassFromString(serviceClss);
     id instance = [[serviceCls alloc]init];
     unsigned int count;
     Method *methods = class_copyMethodList(serviceCls, &count);
@@ -58,6 +68,8 @@ static NSString *kIQService = @"IQService";
     NSMethodSignature *mSignature = [instance methodSignatureForSelector:selector];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:mSignature];
     invocation.selector = selector;
+    id returnValue = nil;
+    
     NSInteger index = 2;
     for (id arg in argsArray) {
 #pragma clang diagnostic push
@@ -67,7 +79,10 @@ static NSString *kIQService = @"IQService";
         index++;
     }
     [invocation invokeWithTarget:instance];
-    
+    if (mSignature.methodReturnLength) {
+        [invocation getReturnValue:&returnValue];
+    }
+    return returnValue;
 }
 
 + (void)registerMicroServices {
@@ -98,7 +113,11 @@ static NSString *kIQService = @"IQService";
             continue;
         }
         
+        NSArray *moduleService = [NSArray arrayWithContentsOfFile:microServicePath];
         
+        [moduleService enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [self.microServiceMap addEntriesFromDictionary:obj];
+        }];
         
     }
     

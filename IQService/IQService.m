@@ -11,7 +11,7 @@
 #import <objc/message.h>
 
 static NSString *kIQService     = @"IQService";
-static NSString *kIQServiceKey  = @"serviceName";
+static NSString *kIQServiceKey  = @"IQServiceKey";
 
 @interface IQService ()
 

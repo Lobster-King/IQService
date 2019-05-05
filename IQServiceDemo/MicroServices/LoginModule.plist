@@ -3,11 +3,11 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>LoginModuleCookieService</key>
+		<key>GetCookieSyncService</key>
 		<string>LoginModuleCookieService</string>
 	</dict>
 	<dict>
-		<key>LoginModuleAsyncService</key>
+		<key>GetCookieAsyncService</key>
 		<string>LoginModuleAsyncService</string>
 	</dict>
 </array>

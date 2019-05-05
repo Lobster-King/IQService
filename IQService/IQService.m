@@ -68,7 +68,7 @@ static NSString *kIQServiceKey  = @"serviceName";
     NSMethodSignature *mSignature = [instance methodSignatureForSelector:selector];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:mSignature];
     invocation.selector = selector;
-    id returnValue = nil;
+    __autoreleasing id returnValue = nil;
     
     NSInteger index = 2;
     for (id arg in argsArray) {

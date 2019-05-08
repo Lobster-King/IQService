@@ -61,7 +61,7 @@ void (^callBack)(NSString *) = ^(NSString *cookie){
 ## IQService路线图
 
 * 支持多种注册方式，动态注册，注解方案等。目前仅支持静态注册。
-* 在编译器进行参数有效性校验。
+* 在编译期进行参数有效性校验。
 
 ## 联系我
 PRs or Issues.  

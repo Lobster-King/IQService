@@ -69,7 +69,7 @@ static NSString *kIQServiceKey  = @"IQServiceKey";
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:mSignature];
     invocation.selector = selector;
     __autoreleasing id returnValue = nil;
-    
+//    id returnValue = nil;记得排查返回值crash问题
     NSInteger index = 2;
     for (id arg in argsArray) {
 #pragma clang diagnostic push

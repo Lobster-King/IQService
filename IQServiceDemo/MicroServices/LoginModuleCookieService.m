@@ -11,7 +11,15 @@
 @implementation LoginModuleCookieService
 
 - (NSString *)getCookieWithSignature:(NSString *)signature {
-    return [NSString stringWithFormat:@"%@->cookie",signature];
+    /*
+     1.返回值英文、无拼接->不崩溃
+     2.返回值英文、有拼接->崩溃
+     3.返回值中文、无拼接->崩溃
+     4.返回值中文、有拼接->崩溃
+     
+     */
+    return [NSString stringWithFormat:@"%@",signature];
+//    return [NSString stringWithFormat:@"%@->cookie",signature];
 }
 
 @end

@@ -10,5 +10,9 @@
 		<key>GetCookieAsyncService</key>
 		<string>LoginModuleAsyncService</string>
 	</dict>
+	<dict>
+		<key>NormalMethodTest</key>
+		<string>NormalMethodTest</string>
+	</dict>
 </array>
 </plist>

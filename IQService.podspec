@@ -8,6 +8,7 @@
 
 Pod::Spec.new do |spec|
 
+
   spec.name         = "IQService"
   spec.version      = "0.0.1"
   spec.summary      = "iOS端模块间通信解决方案。"
